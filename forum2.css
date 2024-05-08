@@ -1,0 +1,301 @@
+@font-face {
+    font-family: 'Neue Machina Regular';
+    src: url('NeueMachina-Light.otf') format('opentype');
+    
+}
+@font-face {
+    font-family: 'Neue Machina Regular';
+    src: url('NeueMachina-Regular.otf') format('opentype');
+    
+}
+@font-face {
+    font-family: 'Neue Machina Regular';
+    src: url('NeueMachina-Ultrabold.otf') format('opentype');
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-between; /* Modified */
+    align-items: flex-start; /* Modified */
+    height: 100%;
+}
+.navbar {
+    background-color: #004FFF;
+    padding: 15px;
+    height: 95vh; /* Adjusted */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; /* Adjusted */
+}
+
+.navbar img {
+    width: 35px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 60px; /* Adjust spacing as needed */
+}
+.navbar .icons {
+    text-align: center;
+}
+.navbar .icons i {
+    font-size: 30px;
+    margin: 20px 0;
+    cursor: pointer;
+    display: block;
+    color: #8DBEFF; 
+}
+
+
+.logout-circle i {
+    font-size: 30px;
+    margin: 40px 0;
+    cursor: pointer;
+    display: block;
+    color: #004FFF; 
+}
+.navbar .icons i.active {
+    color: white; 
+}
+.navbar .icons i:hover {
+    opacity: 0.8;
+}
+
+
+.logout-circle {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: 90px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 53px;
+ 
+    
+  
+}
+.profile {
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 1;
+    margin-right: 30px;
+    margin-top: 20px;
+
+}
+.profile img {
+    width: 50px;
+    height: 50px;
+}
+
+.profile2 {
+flex-direction: column;
+margin-left: 10px;
+margin-top: 5px;
+display: flex;
+}
+
+.profile2 .fullname {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    display: inline;
+}
+
+.profile2 .username {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+}
+
+.profile .ri-notification-fill {
+   
+   margin-left: 870px;
+   font-size: 25px;
+   margin-top: 10px;
+}
+
+.container .content {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: flex-start; /* Align items to the start of the flex container */
+    align-items: flex-start; /* Align items to the start of the cross axis */
+    flex-direction: row;
+}
+
+.forum-content {
+    max-height: calc(90vh - 100px); /* Adjusted height considering navbar height */
+    margin-top: 20px;
+    /* overflow-y: auto; Add scrollbar when content overflows */
+}
+
+
+h1 {
+    font-size: 25px;
+    color: blue;
+    font-family:'Neue Machina Ultrabold' ;
+}
+
+p1 {
+    top: 75px;
+    margin-left: 860px;
+    color: white;
+    background-color: blue; 
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+   
+    
+}
+
+
+
+.sort {
+    flex-direction: row;
+    display: flex;
+    margin-top: 65px;
+    margin-left: -1087px;
+}
+
+.sort1 {
+    padding: 6px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: lightgray;
+    margin-right: 10px;
+    border-radius: 10px;
+    color: black;
+}
+
+.sort1.active {
+    color: white;
+    background-color: gray; 
+}
+
+.study {
+    flex-direction: row;
+    display: flex;
+    margin-bottom: 10px;
+}
+.forum {
+    padding: 10px;
+    background-color: FFFFFF;
+    box-shadow: 0px 0px 10px #DCDCDC;
+    border-radius: 10px;
+    margin-right: 40px;
+    
+    margin-bottom: 5px;
+    flex: 1 0 auto; 
+}
+
+.title {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.info {
+    font-size: 11px;
+    margin-bottom: 15px;
+    display: flex; /* Added */
+    align-items: center; /* Added */
+}
+.info i {
+    margin-right: 5px;
+    color: #686868;
+}
+
+.time {
+    margin-right: 5px;
+}
+
+.course {
+    margin-left: 10px;
+    margin-top: 3px;
+    border-radius: 5px;
+    padding: 6px;
+    background-color: lightblue;
+    font-size: 13px;
+}
+
+.course1 {
+    margin-left: 10px;
+    margin-top: 3px;
+    border-radius: 5px;
+    padding: 6px;
+    background-color: plum;
+    font-size: 13px;
+}
+
+.user{
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.text {
+    margin-top: -2px;
+    font-size: 15px;
+    width: 1070px;
+    text-align: justify;
+}
+
+.time2 {
+    margin-top: 10px;
+    font-size: 11px;
+    color: gray;
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis for overflow text */
+}
+
+.bottom-info, .bottom-info2 {
+    display: flex; /* Added */
+    align-items: center; /* Added */
+    margin-top: -2px;
+}
+
+.bottom-info i {
+    margin-top: 10px;
+    margin-left:870px;
+    font-size: 20px;
+}
+
+.bottom-info i2 {
+    margin-top: 12px;
+    margin-left:10px;
+    font-size: 20px;
+}
+
+.bottom-info2 i {
+    margin-top: 10px;
+    margin-left:885px;
+    font-size: 20px;
+}
+
+.bottom-info2 i2 {
+    margin-top: 12px;
+    margin-left:10px;
+    font-size: 20px;
+}
+
+.like, .comment {
+    margin-top: 10px;
+    margin-left:5px;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+  }

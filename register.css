@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'Neue Machina Regular';
+    src: url('NeueMachina-Light.otf') format('opentype');
+    
+}
+@font-face {
+    font-family: 'Neue Machina Regular';
+    src: url('NeueMachina-Regular.otf') format('opentype');
+    
+}
+@font-face {
+    font-family: 'Neue Machina Regular';
+    src: url('NeueMachina-Ultrabold.otf') format('opentype');
+    
+}
+
+.container {
+    position: fixed; /* Use fixed positioning */
+    top: 0; /* Align container to the top */
+    left: 0; /* Align container to the left */
+    /* width: 1000%; Set width to 100% of viewport */
+    height: 100%; /* Set height to 100% of viewport */
+}
+
+.container .img1 {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100vh; /* Set max height to 100% of viewport height */
+    width: 110vh; /* Set width to 50% of viewport width */
+    display: block; /* Ensure the image is displayed as a block element */
+    object-fit: cover;
+}
+
+.container .img2 {
+    z-index: 1;
+    max-width: 80px;
+    max-height: 80px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+
+
+
+.login {
+   
+    max-width: 300px; /* Adjust width as needed */
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px; /* Add padding */
+    margin-left: 775px;
+    margin-top: 30px;
+    
+    
+}
+
+.login h1 {
+    font-family:'Neue Machina Ultrabold' ;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.login p1{
+    
+    margin-top: 0;
+    margin-bottom: 100px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+.fullname, .password, .username, .email, .major, .year{
+    font-family: "Roboto", sans-serif;
+    font-weight: 550;
+    font-style: normal;
+    margin-top: 10px;
+    margin-bottom: 0px; /* Add space between form groups */
+    display: block;
+}
+
+
+
+
+
+
+
+label {
+    display: block; /* Display labels as block elements */
+    margin-bottom: 5px; /* Add space below labels */
+}
+
+input[type="fullname"],
+input[type="email"],
+input[type="username"],
+input[type="major"],
+input[type="year"],
+input[type="password"] {
+    width: 100%; /* Set input width to 100% */
+    
+    padding: 10px; /* Add padding */
+    border: 1px solid black; /* Add border */
+    border-radius: 2px; /* Add border radius */
+    
+}
+
+button {
+    font-family: "Roboto", sans-serif;
+    font-weight: 550;
+    font-style: normal;
+    margin-top: 15px;
+    width: 107.3%; /* Set button width to 100% */
+    padding: 10px; /* Add padding */
+    border: none; /* Remove default border */
+    border-radius: 3px; /* Add border radius */
+    background-color: blue; /* Button background color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+button:hover {
+    background-color: darkblue; /* Darker background color on hover */
+}
+
+.login .p1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 20px;
+    transform: translateX(115px);
+
+}
+

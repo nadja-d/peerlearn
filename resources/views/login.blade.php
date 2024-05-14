@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Title Here</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,30 +17,30 @@
 <body>
     <main>
         <div class="container">
-            <img src="image 7.png" class="img1">
-            <img src="image 8.png" class="img2">
+            <img src="{{ asset('assets/image 7.png') }}" class="img1">
+            <img src="{{ asset('assets/image 8.png') }}" class="img2">
         </div>
 
-        <form class="login" method="post">
+        <form class="login" method="post" action="{{ route('login') }}">
+            @csrf
             <h1>Login</h1>
             <p1>Let's get you locked in!</p1>
-            <div class="email">
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
+            <div class="username">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
             </div>
             <div class="password">
                 <label class="password2" for="password">Password:</label>
                 <label class="forgot-password" for="password">Forgot Password?</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <a href="homepage2.html">
-                <button type="button">Login</button>
-            </a>
+            <button type="submit">Login</button>
+
             <div class="p1">or sign in with</div>
 
             <div class="google"> <i class="gg-google"></i>Continue with Google</div>
-            <div class="p2"><a href="register.html">Create an account</a></div>
-
+            <div class="p2"><a href="{{ route('register') }}">Create an account</a></div>
         </form>
+
     </main>
 </body>

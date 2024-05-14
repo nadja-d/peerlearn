@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEERLEARN</title>
-    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
     <link rel="shortcut icon" type="image/x-icon" href="PEERLEARN.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 
@@ -13,10 +13,10 @@
 
 <body>
     <div class="navbar">
-        <img src="PEERLEARN.png" alt="PeerLearn Logo">
+        <img src="{{ asset('assets/PEERLEARN.png') }}">
         <div class="icons">
-            <a href="homepage.html"><i class="ri-home-6-line active" onclick="toggleActive(this)"></i></a>
-            <a href="forum-latest.html"><i class="ri-chat-2-line" onclick="toggleActive(this)"></i></a>
+            <a href="homepage2.html"><i class="ri-home-6-line active" onclick="toggleActive(this)"></i></a>
+            <a href="forum2.html"><i class="ri-chat-2-line" onclick="toggleActive(this)"></i></a>
             <a href="schedule.html"><i class="ri-calendar-schedule-line" onclick="toggleActive(this)"></i></a>
             <a href="folder.html"><i class="ri-folder-3-line" onclick="toggleActive(this)"></i></a>
             <a href="groupchat.html"><i class="ri-group-line" onclick="toggleActive(this)"></i></a>
@@ -29,10 +29,10 @@
     </div>
     <div class="container">
         <div class="profile">
-            <img src="Avatar.png" alt="PeerLearn Logo">
+            <img src="{{ asset('assets/AVATAR.png') }}">
             <div class="profile2">
-                <div class="fullname">Westin Budiharjo</div>
-                <div class="username">@Westinbudiharjo</div>
+                <div class="fullname">{{ $fullName }}</div>
+                <div class="username">{{ $username }}</div>
 
             </div>
             <i class="ri-notification-fill"></i>
@@ -75,14 +75,13 @@
                 </div>
             </div>
 
-
             <h1>Your Forum</h1>
             <div class="study">
                 <div class="forum">
                     <div class="background"></div>
                     <div class="title">Optimizing Database Queries for E-Commerce Website</div>
                     <div class="info">
-                        <img src="ava.png" alt="PeerLearn Logo">
+                        <img src="{{ asset('assets/ava.png') }}">
                         <div class="user">Kelly Chang</div>
 
                         <div class="course">Business Application Development</div>
@@ -99,6 +98,7 @@
                         <div class="comment">14</div>
 
                     </div>
+
                 </div>
 
                 <script>

@@ -82,32 +82,47 @@ class userController extends Controller
 
     public function login(Request $request)
     {
+        // Validate the user input
+        $request->validate([
+            'username' => 'required|string',
+            'password' => 'required|string',
+        ]);
+    
         $username = $request->input('username');
         $password = $request->input('password');
-
-        $userCollection = DB::select('CALL authenticateUser(?, ?)', [$username, $password]);
-
-
-        // Check if the result is not empty and retrieve the first element
-        if (!empty($userCollection)) {
-            $customer = $userCollection[0];
-
-            // Check if the result is not equal to 'Authentication Failed'
-            if ($customer->result !== 'Authentication Failed') {
-                $customerID = $customer->result;
-
-                // Store the userID in the session
-                session(['customerID' => $customerID]);
-
-                $cookie = cookie('category', 'cookie', 0);
-
-                // Redirect to the profile page
-                return redirect()->route('homepage', ['category' => 'cookie', 'customerID' => $customerID])->withCookie($cookie);
-            } else {
-                return redirect()->route('login');
-            }
+    
+        // Attempt to find the user by username and plain text password
+        $user = User::where('username', $username)->where('password', $password)->first();
+    
+        if ($user) {
+            // Authentication passed, store the user ID in the session
+            session(['userID' => $user->userID]);
+    
+            // Redirect to the homepage with the cookie
+            return redirect()->route('homepage', ['userID' => $user->userID]);
+        } else {
+            // Authentication failed
+            return redirect()->route('login')->withErrors([
+                'username' => 'The provided credentials do not match our records.',
+            ]);
         }
     }
+    
+    public function showUserDetails($userID)
+    {
+        // Retrieve the user based on userID
+        $user = User::find($userID);
+
+        // Check if the user exists
+        if ($user) {
+            // Return the view with the user's full name
+            return view('homepage', ['username' => $user->username,'fullName' => $user->fullname]);
+        } else {
+            // Handle the case where the user is not found
+            return redirect()->route('homepage')->with('error', 'User not found');
+        }
+    }
+
     public function updatePasswordByEmail(Request $request)
     {
         $email = $request->input('email');

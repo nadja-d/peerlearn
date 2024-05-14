@@ -1,0 +1,283 @@
+@font-face {
+    font-family: 'Neue Machina Light';
+    src: url('NeueMachina-Light.otf') format('opentype');
+    
+}
+@font-face {
+    font-family: 'Neue Machina Regular';
+    src: url('NeueMachina-Regular.otf') format('opentype');
+    
+}
+@font-face {
+    font-family: 'Neue Machina Ultrabold';
+    src: url('NeueMachina-Ultrabold.otf') format('opentype');
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-between; /* Modified */
+    align-items: flex-start; /* Modified */
+    height: 100%;
+}
+.navbar {
+    background-color: #004FFF;
+    padding: 15px;
+    height: 95vh; /* Adjusted */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; /* Adjusted */
+}
+
+.navbar img {
+    width: 35px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 60px; /* Adjust spacing as needed */
+}
+.navbar .icons {
+    text-align: center;
+}
+.navbar .icons i {
+    font-size: 30px;
+    margin: 20px 0;
+    cursor: pointer;
+    display: block;
+    color: #8DBEFF; 
+}
+
+
+.logout-circle i {
+    font-size: 30px;
+    margin: 40px 0;
+    cursor: pointer;
+    display: block;
+    color: #004FFF; 
+}
+.navbar .icons i.active {
+    color: white; 
+}
+.navbar .icons i:hover {
+    opacity: 0.8;
+}
+
+
+.logout-circle {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: 90px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 53px;
+ 
+    
+  
+}
+.profile {
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 1;
+    margin-right: 30px;
+    margin-top: 20px;
+    width: 100vh;
+
+}
+
+.avatar img {
+    width: 140px;
+    height: 140px;
+    margin-left: 525px;
+    margin-top: 30px;
+}
+
+.edit img {
+    width: 60px;
+    height: 60px;
+    margin-top: 130px;
+    margin-left:-50px;
+
+}
+
+.profile2 {
+flex-direction: column;
+margin-left: -183px;
+margin-top: 195px;
+display: flex;
+align-items: center;
+}
+
+.profile2 .fullname {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 28px;
+    display: inline;
+}
+
+.profile2 .username {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    
+}
+
+
+
+
+
+
+a {
+    text-decoration: none;
+    color: black;
+  }
+
+
+
+p1 {
+    /* position: absolute;
+    top:53%;
+    left: 700px; */
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+p2 {
+    /* top: 52%;
+    position: absolute;
+    left: 1100px; */
+    color: white;
+    background-color: blue; 
+    padding: 10px;
+    border-radius: 10px;
+    padding-right: 45px;
+    margin-left: auto;
+    justify-content: right;
+    align-items: flex-end;
+    position: relative;
+    margin-left: 290px;
+    top:px
+    
+}
+
+p3 {
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: white;
+    border-radius: 50%;
+    font-weight:bold ;
+    position: absolute;
+    right:15px;
+    top:3px;
+}
+.add{
+    margin-bottom: 10px;
+    position: relative;
+}
+.info {
+    display: flex;
+    margin-top: 20px;
+    position: relative;
+}
+
+.info img {
+    margin-right: 10px; /* Adjust spacing between image and text */
+    margin-left: 10px;
+    width: 50px;
+    height: 50px ;
+}
+
+.user {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.user-area{
+    flex-direction: column;
+    display: flex;
+    margin-top: 5px;
+}
+.username2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    margin-top: 1px;
+}
+
+.horizontal-line::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 12px;
+    width: 97%; /* Full width */
+    height: 0.1px; /* Adjust thickness as needed */
+    background-color: lightgrey; /* Adjust color as needed */
+}
+
+.friend {
+    
+    top: 50%;
+    left:55%;
+    width: 95vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.setting {
+    position: absolute;
+    top: 50%;
+    right: 600px; /* Adjusted distance from the right */
+    background-color: FFFFFF;
+    box-shadow: 0px 0px 10px #DCDCDC;
+    padding: 10px;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 550px;
+    font-size: 16px;
+}
+
+.part1 {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 30px; /* Adjust spacing between parts */
+    margin-top: 10px;
+}
+
+.part2{
+    display: flex;
+}
+
+.part3 {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-top: 30px; /* Adjust spacing between parts */
+    margin-bottom: 10px;
+}
+
+.setting i {
+    margin-right: 10px;
+}
+
+.english {
+    color: #004FFF;
+    justify-content: right;
+    align-self: flex-end; /* Align the item at the end of its container */
+    margin-left: auto; /* Push the item to the right */
+}
